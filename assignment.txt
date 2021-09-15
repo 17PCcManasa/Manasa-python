@@ -1,0 +1,152 @@
+Q1).when to use lists and when to use tuples,dictionaries or sets?
+LISTS:
+     when we have to add or change or remove the elemnets then we will use lists.
+         it is used to store an orderd collections of items.
+         lt will supports all types of data ni single list.
+         list is mutable.             
+               e.g:x = [9.5,'manasa',25]
+
+Python 3.9.7 (tags/v3.9.7:1016ef3, Aug 30 2021, 20:19:38) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> x = [9.5, 'manasa', 25]
+>>> x.append(33)
+>>> x
+[9.5, 'manasa', 25, 33]
+
+
+TUPLE:
+   when the data is not to be changed then we will use tuple
+   it is immutable
+
+Python 3.9.7 (tags/v3.9.7:1016ef3, Aug 30 2021, 20:19:38) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> x = (9.4, 'manasa', 25)
+>>> x.append(54)
+Traceback (most recent call last):
+  File "<pyshell#1>", line 1, in <module>
+    x.append(54)
+AttributeError: 'tuple' object has no attribute 'append'
+
+
+DICTIONARIES:
+when we have to find an element easily without searching for all the elements then we use dictionaries.
+in the below example by using roll no(key) we will easily retrieve the name(value)without searching for all the elements.
+>>> x = {1:'manasa',2:'kiran',3:'suri'}
+>>> x[3]
+'suri'
+
+SETS:
+    when we dont want duplicate elements then we have to use sets
+    it will be display the output by using hash not by sorting order.
+>>> x = {22, 45, 78, 12, 21, 9}
+>>> x
+{21, 22, 9, 12, 45, 78}
+>>> x = {24, 14, 65, 44, 98}
+>>> x
+{65, 98, 24, 44, 14}
+
+Q2).select an element from list?
+>>> x = [9.5, 'manasa', 25]
+>>> x[1]
+'manasa'
+>>> x.index(25)
+2
+
+Q3).Transform lists into other data structures?
+sol:in below list is transformed to other data structures
+   list->tuple
+   list->dictionary
+   list->set 
+
+>>> x = [9.5, 'manasa', 25]
+>>> x
+[9.5, 'manasa', 25]
+>>> tuple(x)
+(9.5, 'manasa', 25)
+>>> y = [1,2,3]
+>>> dict(zip(y,x))
+{1: 9.5, 2: 'manasa', 3: 25}
+>>> set(x)
+{9.5, 'manasa', 25}
+>>> 
+
+Q4).Determine the size of list?
+sol:By using len() we can find the size of list.
+>>> x = [9.5, 'manasa', 25]
+>>> len(x)
+3
+
+Q5).What's the difference between the python append() and extend() methods?
+sol:
+     append()
+            it will add only one element in the end of list.
+     extend()
+            it will add multiple elements at a time in the end of list.
+>>> x = [9.5, 'manasa', 25]
+>>> x.append(4)
+>>> x
+[9.5, 'manasa', 25, 4]
+>>> x.extend([5,6])
+>>> x
+[9.5, 'manasa', 25, 4, 5, 6]
+>>> x.append([5,7])
+>>> x
+[9.5, 'manasa', 25, 4, 5, 6, [5, 7]]
+
+Q6)How to concatenate lists?
+sol:by using"+"symbol
+>>> x = [9.5,'manasa', 25]
+>>> y = [4,7,9]
+>>> x + y
+[9.5, 'manasa', 25, 4, 7, 9]
+>>> 
+Q7)How to sort a list?
+sol:by using sort()function
+>>> x = [22,45,7,9]
+>>> x.sort()
+>>> x
+[7, 9, 22, 45]
+>>> x.sort(reverse=True)
+>>> x
+[45, 22, 9, 7]
+
+Q8)How to clone or copy a list?
+sol:by using copy()function
+sol:by using sort()function
+>>> x = [22,45,7,9]
+>>> x.sort()
+>>> x
+[7, 9, 22, 45]
+>>> x.sort(reverse=True)
+>>> x
+[45, 22, 9, 7]
+Q9)How does list comprehension work in python?
+sol:it creates a new list based on the values of the existing list.
+
+Q10)How to count occurences of a list item in python?
+sol:by using "count()"function
+>>> x = [1,3,6,8,2]
+>>> x.count(3)
+1
+Q11)How to loop over a list?
+sol: x = [3, 6, 8,33]
+>>> for i in (x):
+	print(i)
+
+	
+3
+6
+8
+33
+Q12)How to remove duplicates from the list?
+sol: x = [1,2,5,6,9,]
+>>> z = set(x)
+>>> z
+{1, 2, 5, 6, 9}
+
+
+
+
+
+
+

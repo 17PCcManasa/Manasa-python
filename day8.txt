@@ -1,0 +1,228 @@
+data structures:
+================
+-->the way of arranging different types of data in a structure.
+  -->list
+  --->we will call it is a data type and also we call it is data structures.
+>>> l = []
+>>> li = list()
+>>> type(l)
+<class 'list'>
+>>> type(li)
+<class 'list'>
+>>> li = [12,12.56,"conzura",True]
+>>> li
+[12, 12.56, 'conzura', True]
+>>>>> len(li)
+4
+>>> li[1]
+12.56
+>>> li[-1]
+True
+>>> li[1:3]
+[12.56, 'conzura']
+>>> li[2:]
+['conzura', True]
+>>> li[:3]
+[12, 12.56, 'conzura']
+nums[::-2]
+[10, 8, 6, 4, 2]
+>>> nums[1::2]
+[2, 4, 6, 8, 10]
+>>> nums[0::3]
+[1, 4, 7, 10]
+>>> nums[::-1]
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+>>> dir(li)
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort'] 
+-it is mutable(add,update,delete)
+   -->accessing list:
+     -->forward and backward
+     -->accesing particular position
+   list methods:  
+'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+ nums = [1,2,3,4,5,6,7,8,9,10]
+>>> nums
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>>> nums.append(4)
+>>> nums
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 4]
+>>> nums.append(7)
+>>> nums
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 4, 7]
+>>> nums.append(1)
+>>> nums
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 4, 7, 1]
+>>> nums.insert(4,10)
+>>> nums
+[1, 2, 3, 4, 10, 5, 6, 7, 8, 9, 10, 4, 7, 1]
+>>> nums.inser(9,2)
+Traceback (most recent call last):
+  File "<pyshell#11>", line 1, in <module>
+    nums.inser(9,2)
+AttributeError: 'list' object has no attribute 'inser'
+>>> nums.insert(9,2)
+>>> nums
+[1, 2, 3, 4, 10, 5, 6, 7, 8, 2, 9, 10, 4, 7, 1]
+>>> nums.extend([11,12,13,14,15])
+>>> nums
+[1, 2, 3, 4, 10, 5, 6, 7, 8, 2, 9, 10, 4, 7, 1, 11, 12, 13, 14, 15] 
+nums.insert(9,2)
+>>> nums
+[1, 2, 3, 4, 10, 5, 6, 7, 8, 2, 9, 10, 4, 7, 1]
+>>> nums.extend([11,12,13,14,15])
+>>> nums
+[1, 2, 3, 4, 10, 5, 6, 7, 8, 2, 9, 10, 4, 7, 1, 11, 12, 13, 14, 15]
+>>> nums[5]
+5
+>>> nums[5] = 52
+>>> nums
+[1, 2, 3, 4, 10, 52, 6, 7, 8, 2, 9, 10, 4, 7, 1, 11, 12, 13, 14, 15]
+>>> nums[9]
+2
+>>> nums[10] = 89
+>>> nums
+[1, 2, 3, 4, 10, 52, 6, 7, 8, 2, 89, 10, 4, 7, 1, 11, 12, 13, 14, 15]
+>>> li
+Traceback (most recent call last):
+  File "<pyshell#22>", line 1, in <module>
+    li
+NameError: name 'li' is not defined
+>>> li
+Traceback (most recent call last):
+  File "<pyshell#23>", line 1, in <module>
+    li
+NameError: name 'li' is not defined
+>>> li = [12,12.56,'conzura',True]
+>>> li
+[12, 12.56, 'conzura', True]
+>>> li.clear()
+>>> li
+[]
+>>> li.extend[12,34,5,6]
+Traceback (most recent call last):
+  File "<pyshell#28>", line 1, in <module>
+    li.extend[12,34,5,6]
+TypeError: 'builtin_function_or_method' object is not subscriptable
+>>> li
+[]
+>>> numbers = nums
+>>> numbers
+[1, 2, 3, 4, 10, 52, 6, 7, 8, 2, 89, 10, 4, 7, 1, 11, 12, 13, 14, 15]
+>>> type(numbers)
+<class 'list'>
+>>> numbers.append(7,8,9)
+Traceback (most recent call last):
+  File "<pyshell#33>", line 1, in <module>
+    numbers.append(7,8,9)
+TypeError: list.append() takes exactly one argument (3 given)
+>>> numbers.append(789)
+>>> numbers
+[1, 2, 3, 4, 10, 52, 6, 7, 8, 2, 89, 10, 4, 7, 1, 11, 12, 13, 14, 15, 789]
+>>> del nums[-1]
+>>> nums
+[1, 2, 3, 4, 10, 52, 6, 7, 8, 2, 89, 10, 4, 7, 1, 11, 12, 13, 14, 15]
+>>> nums1 = nums.copy()
+>>> nums
+[1, 2, 3, 4, 10, 52, 6, 7, 8, 2, 89, 10, 4, 7, 1, 11, 12, 13, 14, 15]
+>>> nums1.append9789)
+SyntaxError: unmatched ')'
+>>> nums1.append(789)
+>>> nums1
+[1, 2, 3, 4, 10, 52, 6, 7, 8, 2, 89, 10, 4, 7, 1, 11, 12, 13, 14, 15, 789]
+>>> nums
+[1, 2, 3, 4, 10, 52, 6, 7, 8, 2, 89, 10, 4, 7, 1, 11, 12, 13, 14, 15]
+>>> del.nums1(-1)
+SyntaxError: invalid syntax
+>>> del nums1(-1)
+SyntaxError: cannot delete function call
+>>> delnums1(-1)
+Traceback (most recent call last):
+  File "<pyshell#46>", line 1, in <module>
+    delnums1(-1)
+NameError: name 'delnums1' is not defined
+>>> del nums1[-1]
+>>> nums
+[1, 2, 3, 4, 10, 52, 6, 7, 8, 2, 89, 10, 4, 7, 1, 11, 12, 13, 14, 15]
+>>>  nums = [1,2,3,4,5,6,7,8,9,10]
+>>> nums
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>>> nums.append(4)
+>>> nums
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 4]
+>>> nums.append(7)
+>>> nums
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 4, 7]
+>>> nums.append(1)
+>>> nums
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 4, 7, 1]
+>>> nums.insert(4,10)
+>>> nums
+[1, 2, 3, 4, 10, 5, 6, 7, 8, 9, 10, 4, 7, 1]
+nums.insert(9,2)
+>>> nums
+[1, 2, 3, 4, 10, 5, 6, 7, 8, 2, 9, 10, 4, 7, 1]
+>>> nums.extend([11,12,13,14,15])
+>>> nums
+[1, 2, 3, 4, 10, 5, 6, 7, 8, 2, 9, 10, 4, 7, 1, 11, 12, 13, 14, 15]
+>>> nums[5]
+5
+>>> nums[5] = 52
+>>> nums
+[1, 2, 3, 4, 10, 52, 6, 7, 8, 2, 9, 10, 4, 7, 1, 11, 12, 13, 14, 15]
+>>> nums[9]
+2
+>>> nums[10] = 89
+>>> nums
+[1, 2, 3, 4, 10, 52, 6, 7, 8, 2, 89, 10, 4, 7, 1, 11, 12, 13, 14, 15]
+>>> li
+max(nums)
+89
+>>> min(nums)
+1
+>>> sum(nums)
+271
+>>> 271/len(nums)
+13.55
+>>> sum(nums)/len(nums)
+13.55
+>>> nums[-1]
+15
+>>> nums[::-1]
+[15, 14, 13, 12, 11, 1, 7, 4, 10, 89, 2, 8, 7, 6, 52, 10, 4, 3, 2, 1]
+>>> nums.reverse()
+>>> nums
+[15, 14, 13, 12, 11, 1, 7, 4, 10, 89, 2, 8, 7, 6, 52, 10, 4, 3, 2, 1]
+>>> nums.sort()
+>>> nums
+[1, 1, 2, 2, 3, 4, 4, 6, 7, 7, 8, 10, 10, 11, 12, 13, 14, 15, 52, 89]
+>>> nums.pop()
+89
+>>> nums
+[1, 1, 2, 2, 3, 4, 4, 6, 7, 7, 8, 10, 10, 11, 12, 13, 14, 15, 52]
+>>> nums.pop(2)
+2
+>>> nums
+[1, 1, 2, 3, 4, 4, 6, 7, 7, 8, 10, 10, 11, 12, 13, 14, 15, 52]
+>>> nums.remove(13)
+>>> nums
+[1, 1, 2, 3, 4, 4, 6, 7, 7, 8, 10, 10, 11, 12, 14, 15, 52]
+-->tuple
+      --it is immutable(can't add,update,delete)
+t = ()
+>>> t1 = tuple()
+>>> t = (12,89,56,'manasa',False)
+>>> t
+(12, 89, 56, 'manasa', False)
+>>> t[0]
+12
+>>> t[-1]
+False
+>>> t[1:3]
+(89, 56)
+>>> dir(t)
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'count', 'index']
+  -->dictionary
+  -->set
+     -->it is a datatype and also data structures
+     --->it also mutable
+     ---->remove duplicates
