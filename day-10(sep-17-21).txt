@@ -1,0 +1,62 @@
+Dictionaries
+============
+     -->it is a ds and it is also data type 
+     -->here we can store data in pair formate(key and value)
+     -->keys are unique and also keys should be strings
+     -->values may be int,may be str,may be list,tuple,set,dict..
+     -->to define dict we have to use{}
+
+>>> d={12,23,45,23}
+>>> d1={'name':'manasa','age':22.3,'branch':'cse'}
+>>> d1
+{'name': 'manasa', 'age': 22.3, 'branch': 'cse'}
+>>> d1['age']
+22.3
+>>> d1['name']
+'manasa'
+>>> d1.get("branch")
+'cse'
+>>> d1["rollno"]=123
+>>> d1
+{'name': 'manasa', 'age': 22.3, 'branch': 'cse', 'rollno': 123}
+>>> d1["age"]=27
+>>> d1
+{'name': 'manasa', 'age': 27, 'branch': 'cse', 'rollno': 123}
+>>> 
+d1.keys()
+dict_keys(['name', 'age', 'branch', 'rollno'])
+>>> d1.values()
+dict_values(['manasa', 27, 'cse', 123])
+>>> d1.items()
+dict_items([('name', 'manasa'), ('age', 27), ('branch', 'cse'), ('rollno', 123)])
+d1.pop("age")
+27
+>>> d1
+{'name': 'manasa', 'branch': 'cse', 'rollno': 123}
+>>> d1.popitem()
+('rollno', 123)
+>>> d1.update({"phno":"8919847291"})
+>>> d1
+{'name': 'manasa', 'branch': 'cse', 'phno': '8919847291'}
+>>> d1.update({"branch":"cse"})
+>>> d1
+{'name': 'manasa', 'branch': 'cse', 'phno': '8919847291'}
+>>> d1.update({"branch":"ece"})
+>>> d1
+{'name': 'manasa', 'branch': 'ece', 'phno': '8919847291'}
+>>> d1.update({"branch":"ece"})
+>>> d1
+{'name': 'manasa', 'branch': 'ece', 'phno': '8919847291'}
+>>> marks={}.fromkeys(["c","cpp","python","java"],36)
+>>> marks
+{'c': 36, 'cpp': 36, 'python': 36, 'java': 36}
+>>> marks["python"]=80
+>>> marks
+{'c': 36, 'cpp': 36, 'python': 80, 'java': 36}
+>>> d1.setdefault("email","manasa@gmail.com")
+'manasa@gmail.com'
+>>> d1
+{'name': 'manasa', 'branch': 'ece', 'phno': '0987654321', 'email': 'manasa@gmail.com'}
+>>> >>> d1
+{'name': 'manasa', 'branch': 'ece', 'phno': '0987654321', 'email': 'manasa@gmail.com'}
+>>> 
